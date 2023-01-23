@@ -42,6 +42,7 @@
         transform: translate(-50%, -50%);
         text-align: center;
       }
+      /* Toolbar functionality */
     </style>
   </head>
   <body>
@@ -50,7 +51,17 @@
       <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="#" id="contact-button">Contact</a>
       </nav>
     </div>
-    <div class="image-container
+    <div class="image-container">
+      <!-- other HTML code -->
+    </div>
+    <script>
+      const contactButton = document.getElementById("contact-button");
+      contactButton.addEventListener("click", function () {
+        window.open("contact.html", "_self");
+      });
+    </script>
+  </body>
+</html>
