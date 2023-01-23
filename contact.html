@@ -51,8 +51,17 @@
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-        <button onclick="goBack()">Back</button>
-        function goBack() {window.history.back();}
+        <a href="#" id="back-button">Back</a>
       </nav>
     </div>
     <div class="image-container
+          <!-- other HTML code -->
+    </div>
+    <script>
+      const backButtom = document.getElementById("back-button");
+      contactButton.addEventListener("click", function goBack() {
+                                            window.history.back();
+                                            });
+    </script>
+  </body>
+</html>
