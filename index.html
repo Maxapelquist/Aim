@@ -4,12 +4,8 @@
     <title>Aim Homepage</title>
     <style>
       /* CSS styles */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
       body {
+        margin: 0;
         font-family: Arial, sans-serif;
         background-color: #f2f2f2;
       }
@@ -48,21 +44,25 @@
       nav a:hover {
         background-color: rgba(255,255,255,0.1);
       }
-      /* Box styles */
-      .box {
+      /* Image styles */
+      .image {
         width: 100%;
-        height: 300px;
-        background-color: #fff;
-        margin: 20px 0; /* 20px margin på toppen och botten för varje box */
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        max-width: 600px;
       }
-      .box h2 {
-        font-size: 24px;
-        margin: 0;
-      }
+      /* Box styles */
+       .box {
+          width: 50%;
+          height: 100px;
+          background-color: #fff;
+          margin-bottom: 20px; /* 20px margin på botten för varje box */
+          box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+       .box p {
+         padding: 20px;
+       }
     </style>
   </head>
   <body>
