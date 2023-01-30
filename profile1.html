@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Creation</title>
+  <style>
+    /* Center the form on the screen */
+    form {
+      width: 400px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+    }
+    /* Style the form inputs */
+    input[type="text"], input[type="email"] {
+      padding: 0.5em;
+      margin: 0.5em 0;
+      font-size: 1em;
+      width: 100%;
+    }
+    /* Style the menu bar */
+    .menu-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      background-color: lightgray;
+      padding: 0 20px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    }
+    .menu-bar a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.2em;
+    }
+    /* Add style for the header */
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: lightgray;
+      height: 70px;
+      font-size: 2em;
+      color: white;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+  Profile Creation
+</header>
+<!-- Menu bar -->
+<div class="menu-bar">
+  <a href="index.html">Back</a>
+</div>
+<form>
+  <label for="userId">User ID:</label>
+  <input type="text" id="userId" name="userId">
+  <br>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  <br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+  <br>
+  <label for="imageUrl">Image url:</label>
+  <input type="text" id="imageUrl" name="imageUrl">
+  <br>
+  <input type="button" value="Create Profile" onclick="createProfile()">
+
+</form>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+<script>
+  // Firebase Configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyDaCJ2QGm-epEiiCTps_B8rTGivCiywMdg",
+    authDomain: "aimdatabase-db87d.firebaseapp.com",
+    databaseURL: "https://aimdatabase-db87d-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "aimdatabase-db87d",
+    storageBucket: "aimdatabase-db87d.appspot.com",
+    messagingSenderId: "17048738724",
+    appId: "1:17048738724:web:a4c59a25d8cd2c99933f31",
+    measurementId: "G-5GXNWLNF5W"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+
+  function createProfile() {
+    // Get user input
+    const userId = document.getElementById("userId").value;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const imageUrl = document.getElementById("imageUrl").value;
+
+    // Write data to Firebase
+    db.ref('users/' + userId).set({
+      username: name,
+      email: email,
+      profile_picture: imageUrl
+    });
+
+    // Confirmation message
+    alert("Profile created successfully!");
+  }
+</script>
+</body>
+</html>

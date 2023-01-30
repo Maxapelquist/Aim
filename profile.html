@@ -1,81 +1,98 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Profile Creation</title>
-  <style>
-    /* Center the form on the screen */
-    form {
-      width: 400px;
-      background-color: white;
-      padding: 30px;
-      border-radius: 5px;
-      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin: 20px auto;
-    }
-    /* Style the form inputs */
-    input[type="text"], input[type="email"] {
-      padding: 0.5em;
-      margin: 0.5em 0;
-      font-size: 1em;
-      width: 100%;
-    }
-    /* Style the menu bar */
-    .menu-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 50px;
-      background-color: lightgray;
-      padding: 0 20px;
-      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    }
-    .menu-bar a {
-      text-decoration: none;
-      color: black;
-      font-size: 1.2em;
-    }
-    /* Add style for the header */
-    header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: lightgray;
-      height: 70px;
-      font-size: 2em;
-      color: white;
-      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    }
-  </style>
-</head>
-<body>
-<!-- Header -->
-<header>
-  Profile Creation
-</header>
-<!-- Menu bar -->
-<div class="menu-bar">
-  <a href="index.html">Back</a>
-</div>
-<form>
-  <label for="userId">User ID:</label>
-  <input type="text" id="userId" name="userId">
-  <br>
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name">
-  <br>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email">
-  <br>
-  <label for="imageUrl">Image url:</label>
-  <input type="text" id="imageUrl" name="imageUrl">
-  <br>
-  <input type="button" value="Create Profile" onclick="createProfile()">
-
-</form>
+  <head>
+    <title>My Profile Page</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      .toolbar {
+        background-color: #333;
+        color: #fff;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      }
+      .logo {
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0 20px;
+        font-size: 16px;
+        transition: all 0.2s ease-in-out;
+      }
+      nav a:hover {
+        color: #ccc;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .profile-container {
+        padding: 50px;
+        text-align: center;
+      }
+      .profile-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #ccc;
+        margin: 0 auto;
+        max-width: 500px;
+      }
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <a href="#" class="logo">My Website</a>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Profile</a>
+        <a href="#" id="back-button">Back</a>
+      </nav>
+    </div>
+    <div class="profile-container">
+      <h1>My Profile</h1>
+      <form class="profile-form" onsubmit="createProfile(); return false;">
+        <input type="text" id="userId" placeholder="User ID">
+        <input type="text" id="name" placeholder="Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="imageUrl" placeholder="Image URL">
+        <input type="submit" value="Create Profile">
+      </form>
+    </div>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
 <script>
@@ -115,3 +132,16 @@
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
