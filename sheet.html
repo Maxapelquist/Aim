@@ -101,6 +101,11 @@
       $(".cell").removeAttr("contenteditable");
       $(this).attr("contenteditable", true).focus();
     });
+
+    const contactButton = document.getElementById("contact-button");
+    contactButton.addEventListener("click", function () {
+        window.open("contact.html", "_self");
+    });
   </script>
 </body>
 </html>
