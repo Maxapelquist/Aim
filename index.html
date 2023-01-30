@@ -53,28 +53,16 @@
         max-width: 600px;
       }
       /* Box styles */
-      .box {
-        width: 300px;
-        height: 200px;
-        background-color: #fff;
-        margin: 10px;
-        float: left;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        text-align: center;
-        transition: transform 0.2s ease-out;
-      }
-      .box:hover {
-        transform: translateY(-10px);
-      }
-      /* Media query for screens smaller than 500px */
-      @media (max-width: 500px) {
-        .box {
-          width: 100%;
-          height: auto;
-          float: none;
-          margin: 10px 0;
+       .box {
+          width: 50%;
+          height: 100px;
+          background-color: #fff;
+          margin-bottom: 20px; /* 20px margin på botten för varje box */
+          box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
-      }
+       .box p {
+         padding: 20px;
+       }
     </style>
   </head>
   <body>
@@ -94,16 +82,16 @@
 
     <!-- Boxes -->
     <div class="box">
-      <h3>Box 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p> Annons 1</p>
     </div>
     <div class="box">
-      <h3>Box 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p> Annons 2</p>
     </div>
     <div class="box">
-      <h3>Box 3</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p> Annons 3</p>
+    </div>
+    <div class="box">
+      <p> Annons 4</p>
     </div>
 
     <!-- Scripts -->
