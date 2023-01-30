@@ -129,6 +129,12 @@
     // Confirmation message
     alert("Profile created successfully!");
   }
+
+  const backButton = document.getElementById("back-button");
+  backButton.addEventListener("click", function goBack() {
+      window.open("index.html", "_self");
+  });
+
 </script>
 </body>
 </html>
