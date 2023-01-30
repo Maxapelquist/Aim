@@ -1,37 +1,40 @@
 <html>
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <style>
-      #spreadsheet {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid lightgray;
-      }
-      .row {
-        display: flex;
-      }
-      .cell {
-        border: 1px solid lightgray;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        vertical-align: middle;
-      }
-      .header-cell {
-        background-color: #dddddd;
-        font-weight: bold;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        vertical-align: middle;
-        border: 1px solid lightgray;
-      }
-    </style>
+  <style>
+    #spreadsheet {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid lightgray;
+    }
+    .row {
+      display: flex;
+    }
+    .cell {
+      border: 1px solid lightgray;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .header-cell {
+      background-color: #dddddd;
+      font-weight: bold;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid lightgray;
+    }
+  </style>
 </head>
 <body>
   <div id="spreadsheet"></div>
   <script>
+    const spreadsheet = $("#spreadsheet");
+    const rows = 10;
+    const cols = 10;
+
     // Create table for spreadsheet
     for (let r = -1; r < rows; r++) {
       const row = $("<div>").addClass("row");
@@ -39,11 +42,11 @@
         let cell;
         if (r === -1 && c > -1) {
           cell = $("<div>")
-            .addClass("cell header")
+            .addClass("cell header-cell")
             .text(String.fromCharCode(c + 65));
         } else if (c === -1 && r > -1) {
           cell = $("<div>")
-            .addClass("cell header")
+            .addClass("cell header-cell")
             .text(r + 1);
         } else {
           cell = $("<div>")
@@ -61,8 +64,6 @@
       $(".cell").removeAttr("contenteditable");
       $(this).attr("contenteditable", true).focus();
     });
-
   </script>
 </body>
 </html>
-
