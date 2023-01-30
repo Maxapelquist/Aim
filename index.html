@@ -71,8 +71,7 @@
       <a href="#" class="logo">Aim</a>
       <!-- Nav -->
       <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
+        <a href="#" id="about-button">About</a>
         <a href="#" id="contact-button">Contact</a>
         <a href="#" id="profile-button">Profile</a>
       </nav>
@@ -104,6 +103,11 @@
 
       const profileButton = document.getElementById("profile-button");
       profileButton.addEventListener("click", function () {
+        window.open("profile.html", "_self");
+      });
+
+      const aboutButton = document.getElementById("about-button");
+      aboutButton.addEventListener("click", function () {
         window.open("profile.html", "_self");
       });
     </script>
