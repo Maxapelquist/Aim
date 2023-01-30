@@ -3,7 +3,7 @@
   <head>
     <title>My Simple Homepage</title>
     <style>
-      /* CSS styles go here */
+      /* CSS styles */
       body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -18,6 +18,7 @@
         align-items: center;
         justify-content: space-between;
         padding: 0 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
       }
       /* Logo styles */
       .logo {
@@ -25,6 +26,23 @@
         font-weight: bold;
         color: #fff;
         text-decoration: none;
+      }
+      /* Nav styles */
+      nav {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+      }
+      /* Nav links */
+      nav a {
+        color: #fff;
+        font-size: 16px;
+        padding: 0 10px;
+        text-decoration: none;
+        transition: background-color 0.2s ease-out;
+      }
+      nav a:hover {
+        background-color: rgba(255,255,255,0.1);
       }
       /* Image styles */
       .image {
@@ -42,12 +60,13 @@
         transform: translate(-50%, -50%);
         text-align: center;
       }
-      /* Toolbar functionality */
     </style>
   </head>
   <body>
+    <!-- Toolbar -->
     <div class="toolbar">
       <a href="#" class="logo">My Website</a>
+      <!-- Nav -->
       <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
@@ -55,9 +74,11 @@
         <a href="#" id="profile-button">Profile</a>
       </nav>
     </div>
+    <!-- Image -->
     <div class="image-container">
-      <!-- other HTML code -->
+      <img class="image" src="image.jpg" alt="My Image">
     </div>
+    <!-- Scripts -->
     <script>
       const contactButton = document.getElementById("contact-button");
       contactButton.addEventListener("click", function () {
