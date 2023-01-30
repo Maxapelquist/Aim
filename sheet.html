@@ -3,8 +3,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style>
-    #spreadsheet {
+    #spreadsheet-container {
+      width: 500px;
+      margin: 20px auto;
       border: 1px solid black;
+    }
+    #spreadsheet-title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px 0;
     }
     .row {
       display: flex;
@@ -19,7 +27,10 @@
   </style>
 </head>
 <body>
-  <div id="spreadsheet"></div>
+  <div id="spreadsheet-container">
+    <div id="spreadsheet-title">My Spreadsheet</div>
+    <div id="spreadsheet"></div>
+  </div>
   <script>
     const spreadsheet = $("#spreadsheet");
     const cols = 26;
@@ -35,7 +46,6 @@
           .text("");
         row.append(cell);
       }
-
       spreadsheet.append(row);
     }
 
