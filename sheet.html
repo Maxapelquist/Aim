@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.5/xlsx.full.min.js"></script>
+  <script>
+    function handleFile() {
+      var input = document.getElementById("file");
+      var file = input.files[0];
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var data = e.target.result;
+        var workbook = XLSX.read(data, {type: 'binary'});
+        var firstSheetName = workbook.SheetNames[0];
+        var worksheet = workbook.Sheets[firstSheetName];
+        var table = document.getElementById("table");
+        for (var i = 0; i < worksheet['!ref'].split(":")[1].match(/\d+/)[0]; i++) {
+          var row = table.insertRow();
+          for (var j = 0; j < worksheet['!ref'].split(":")[0].match(/\d+/)[0]; j++) {
+            var cell = row.insertCell();
+            cell.innerHTML = worksheet[XLSX.utils.encode_cell({c: j, r: i})].v;
+          }
+        }
+      };
+      reader.readAsBinaryString(file);
+    }
+  </script>
+</head>
+<body>
+  <input type="file" id="file" onchange="handleFile()"/>
+  <table id="table"></table>
+</body>
+</html>
