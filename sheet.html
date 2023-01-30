@@ -54,11 +54,11 @@
           let cell;
           if (r === -1 && c > -1) {
             cell = $("<div>")
-              .addClass("cell header")
+              .addClass("cell header-cell")
               .text(String.fromCharCode(c + 65));
           } else if (c === -1 && r > -1) {
             cell = $("<div>")
-              .addClass("cell header")
+              .addClass("cell header-cell")
               .text(r + 1);
           } else {
             cell = $("<div>")
@@ -68,7 +68,7 @@
           }
           row.append(cell);
         }
-        #spreadsheet.append(row);
+        $("#spreadsheet").append(row);
       }
 
       // Add interactivity to the cells
