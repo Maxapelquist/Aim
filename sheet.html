@@ -25,7 +25,7 @@
 
       .cell {
         border: 1px solid lightgray;
-        width: 40px;
+        width: 50px;
         height: 40px;
         text-align: center;
         vertical-align: middle;
@@ -54,11 +54,11 @@
           let cell;
           if (r === -1 && c > -1) {
             cell = $("<div>")
-              .addClass("cell header")
+              .addClass("cell header-cell")
               .text(String.fromCharCode(c + 65));
           } else if (c === -1 && r > -1) {
             cell = $("<div>")
-              .addClass("cell header")
+              .addClass("cell header-cell")
               .text(r + 1);
           } else {
             cell = $("<div>")
