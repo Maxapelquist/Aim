@@ -1,82 +1,85 @@
 <html>
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <style>
-      body {
-        background-color: #f2f2f2;
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-      }
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    #spreadsheet-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-      #spreadsheet {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid lightgray;
-        width: 500px;
-        height: 400px;
-        margin: 0 auto;
-        padding: 20px;
-      }
+    #spreadsheet {
+      border: 1px solid lightgray;
+      display: flex;
+      flex-direction: column;
+      background-color: #ffffff;
+    }
 
-      .row {
-        display: flex;
-      }
+    .row {
+      display: flex;
+    }
 
-      .cell {
-        border: 1px solid lightgray;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        vertical-align: middle;
-      }
+    .cell {
+      border: 1px solid lightgray;
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      width: 40px;
+    }
 
-      .header-cell {
-        background-color: #dddddd;
-        font-weight: bold;
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        vertical-align: middle;
-        border: 1px solid lightgray;
-      }
-    </style>
-  </head>
-  <body>
+    .header-cell {
+      background-color: #dddddd;
+      border: 1px solid lightgray;
+      font-weight: bold;
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      width: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div id="spreadsheet-container">
     <div id="spreadsheet"></div>
-    <script>
-      const rows = 10;
-      const cols = 10;
+  </div>
+  <script>
+    const spreadsheet = $("#spreadsheet");
 
-      // Create table for spreadsheet
-      for (let r = -1; r < rows; r++) {
-        const row = $("<div>").addClass("row");
-        for (let c = -1; c < cols; c++) {
-          let cell;
-          if (r === -1 && c > -1) {
-            cell = $("<div>")
-              .addClass("cell header")
-              .text(String.fromCharCode(c + 65));
-          } else if (c === -1 && r > -1) {
-            cell = $("<div>")
-              .addClass("cell header")
-              .text(r + 1);
-          } else {
-            cell = $("<div>")
-              .addClass("cell")
-              .attr("id", `cell-${r}-${c}`)
-              .text("");
-          }
-          row.append(cell);
+    // Set number of rows and columns
+    const rows = 10;
+    const cols = 10;
+
+    // Create table for spreadsheet
+    for (let r = -1; r < rows; r++) {
+      const row = $("<div>").addClass("row");
+      for (let c = -1; c < cols; c++) {
+        let cell;
+        if (r === -1 && c > -1) {
+          cell = $("<div>")
+            .addClass("cell header-cell")
+            .text(String.fromCharCode(c + 65));
+        } else if (c === -1 && r > -1) {
+          cell = $("<div>")
+            .addClass("cell header-cell")
+            .text(r + 1);
+        } else {
+          cell = $("<div>")
+            .addClass("cell")
+            .attr("id", `cell-${r}-${c}`)
+            .text("");
         }
-        spreadsheet.append(row);
+        row.append(cell);
       }
+      spreadsheet.append(row);
+    }
 
-      // Add interactivity to the cells
-      $(".cell").on("click", function() {
-        $(".cell").removeAttr("contenteditable");
-        $(this).attr("contenteditable", true).focus();
-      });
-    </script>
-  </body>
+    // Add interactivity to the cells
+    $(".cell").on("click", function() {
+      $(".cell").removeAttr("contenteditable");
+      $(this).attr("contenteditable", true).focus();
+    });
+  </script>
+</body>
 </html>
