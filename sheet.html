@@ -29,20 +29,25 @@
     const cols = 26;
     const rows = 50;
 
-    // Create a table for the spreadsheet
-    for (let r = 0; r < rows; r++) {
+    // Create table for spreadsheet
+    for (let r = -1; r < rows; r++) {
       const row = $("<div>").addClass("row");
-      for (let c = 0; c < cols; c++) {
-        let cellClass = "cell";
-        let cellText = "";
-        if (r === 0) {
-          cellClass = "header-cell";
-          cellText = String.fromCharCode(65 + c);
+      for (let c = -1; c < cols; c++) {
+        let cell;
+        if (r === -1 && c > -1) {
+          cell = $("<div>")
+            .addClass("cell header")
+            .text(String.fromCharCode(c + 65));
+        } else if (c === -1 && r > -1) {
+          cell = $("<div>")
+            .addClass("cell header")
+            .text(r + 1);
+        } else {
+          cell = $("<div>")
+            .addClass("cell")
+            .attr("id", `cell-${r}-${c}`)
+            .text("");
         }
-        const cell = $("<div>")
-          .addClass(cellClass)
-          .attr("id", `cell-${r}-${c}`)
-          .text(cellText);
         row.append(cell);
       }
       spreadsheet.append(row);
