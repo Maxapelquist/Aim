@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Simple Homepage</title>
+    <title>My Contact Page</title>
     <style>
-      /* CSS styles go here */
       body {
         margin: 0;
         font-family: Arial, sans-serif;
         background-color: #f2f2f2;
       }
-      /* Toolbar styles */
       .toolbar {
         background-color: #333;
         color: #fff;
@@ -19,28 +17,43 @@
         justify-content: space-between;
         padding: 0 20px;
       }
-      /* Logo styles */
       .logo {
         font-size: 20px;
         font-weight: bold;
         color: #fff;
         text-decoration: none;
       }
-      /* Image styles */
-      .image {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        max-width: 600px;
-      }
-      /* Center image on the screen */
-      .image-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      .contact-container {
+        padding: 50px;
         text-align: center;
+      }
+      .contact-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #ccc;
+        margin: 0 auto;
+        max-width: 500px;
+      }
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -54,8 +67,14 @@
         <a href="#" id="back-button">Back</a>
       </nav>
     </div>
-    <div class="image-container">
-          <!-- other HTML code -->
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <form class="contact-form">
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <input type="submit" value="Submit">
+      </form>
     </div>
     <script>
       const backButton = document.getElementById("back-button");
