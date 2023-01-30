@@ -77,9 +77,8 @@
     <div class="toolbar">
       <a href="#" class="logo">My Website</a>
       <nav>
-        <a href="#">Home</a>
         <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="#" id="profile-button">Profile</a>
         <a href="#" id="back-button">Back</a>
       </nav>
     </div>
@@ -97,6 +96,10 @@
       backButton.addEventListener("click", function goBack() {
                                             window.open("index.html", "_self");
                                             });
+      const profileButton = document.getElementById("profile-button");
+      profileButton.addEventListener("click", function () {
+        window.open("profile.html", "_self");
+      });
     </script>
   </body>
 </html>
