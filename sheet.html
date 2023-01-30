@@ -103,9 +103,9 @@
       $(this).attr("contenteditable", true).focus();
     });
 
-    const contactButton = document.getElementById("contact-button");
-    contactButton.addEventListener("click", function () {
-        window.open("contact.html", "_self");
+    const backButton = document.getElementById("back-button");
+    backButton.addEventListener("click", function () {
+      window.history.back();
     });
   </script>
 </body>
