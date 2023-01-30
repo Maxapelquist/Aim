@@ -32,10 +32,6 @@
 <body>
   <div id="spreadsheet"></div>
   <script>
-    const spreadsheet = $("#spreadsheet");
-    const cols = 26;
-    const rows = 50;
-
     // Create table for spreadsheet
     for (let r = -1; r < rows; r++) {
       const row = $("<div>").addClass("row");
@@ -65,6 +61,7 @@
       $(".cell").removeAttr("contenteditable");
       $(this).attr("contenteditable", true).focus();
     });
+
   </script>
 </body>
 </html>
