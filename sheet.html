@@ -54,11 +54,11 @@
           let cell;
           if (r === -1 && c > -1) {
             cell = $("<div>")
-              .addClass("cell header-cell")
+              .addClass("cell header")
               .text(String.fromCharCode(c + 65));
           } else if (c === -1 && r > -1) {
             cell = $("<div>")
-              .addClass("cell header-cell")
+              .addClass("cell header")
               .text(r + 1);
           } else {
             cell = $("<div>")
