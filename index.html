@@ -101,29 +101,28 @@
 
     <!-- Scripts -->
     <script>
-      // Get references to the buttons
-      const contactButton = document.getElementById("contact-button");
-      const profileButton = document.getElementById("profile-button");
-      const aboutButton = document.getElementById("about-button");
+      const boxes = document.querySelectorAll(".box");
+      boxes.forEach(function(box) {
+        box.addEventListener("click", function () {
+          window.open("sheet.html", "_self");
+        });
+      });
 
-      // Attach event listeners to the buttons
+      const contactButton = document.getElementById("contact-button");
       contactButton.addEventListener("click", function () {
         window.open("contact.html", "_self");
       });
+
+      const profileButton = document.getElementById("profile-button");
       profileButton.addEventListener("click", function () {
         window.open("profile.html", "_self");
       });
+
+      const aboutButton = document.getElementById("about-button");
       aboutButton.addEventListener("click", function () {
-        window.open("profile.html", "_self");
+        window.open("about.html", "_self");
       });
-
-      // Attach event listener to the parent of the boxes to handle clicks on the boxes
-      document.querySelector('.box').addEventListener('click', function(event) {
-        if (event.target.matches('.box')) {
-          window.open("sheet.html", "_self");
-        }
-      });
-
     </script>
+
   </body>
 </html>
