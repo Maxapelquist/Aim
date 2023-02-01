@@ -1,0 +1,131 @@
+
+
+.submit-button {
+    position: relative;
+    text-align: center;
+    bottom: 0px;
+    
+  }
+
+  /* CSS styles */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fffdfd;
+  }
+  /* Toolbar styles */
+  .toolbar {
+    background-color: #333;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  /* Logo styles */
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  /* Nav styles */
+  nav {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  /* Nav links */
+  nav a {
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out;
+  }
+  nav a:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+  /* Image styles */
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  /* Box styles */
+   .box {
+      width: 50%;
+      height: 100px;
+      background-color: #fff;
+      margin-bottom: 20px; /* 20px margin på botten för varje box */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+   .box p {
+     padding: 20px;
+   }
+   
+   .codeandinfo{
+        display: flex;
+        flex-direction: column; /* change direction to be vertically stacked */
+        justify-content: center;
+        margin: 0 20%;
+        padding: 0 3%;
+        background: linear-gradient(180deg, rgba(10,1,180,1) 0%, rgba(16,16,199,1) 12%, rgba(0,212,255,1) 100%);
+        
+   }
+
+   .info{
+    padding-bottom: 10px;
+    margin:0 auto;
+    background-color: rgb(67, 149, 169);
+    padding: 10px;
+   }
+   .CodeMirror {
+    height: 700px;
+    background-color: rgb(195, 193, 193);
+    color: rgb(34, 33, 33);
+    display: block;
+  }
+    .programmingspace{
+
+   }
+   .example{
+    padding:5px;
+    border-radius: 10px;
+    background-color: #43A994;
+    margin: 5px auto;
+   }
+
+
+@media only screen and (max-width: 1000px){
+
+    .codeandinfo{
+        display: flex;
+        flex-direction: column; /* change direction to be vertically stacked */
+        justify-content: center;
+        margin: 0 0;
+        padding: 0 0;
+        background: white;
+   }
+   .example{
+    padding:5px;
+    border-radius: 10px;
+    background: linear-gradient(#ff575a,#ff54a2);
+    margin: 5px auto;
+   }
+   .info{
+    padding-bottom: 10px;
+    margin:0 auto;
+    background: linear-gradient(#ff54a2,#ff575a);
+    padding: 10px;
+   }
+
+
+
+
+
+}

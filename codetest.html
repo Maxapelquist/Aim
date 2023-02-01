@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aim Homepage</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.57.0/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.57.0/lib/codemirror.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.57.0/mode/python/python.min.js"></script>
+    <script href="codetest.js"></script>
+    <link rel="stylesheet" href="codetest.css">
+
+  </head>
+  <body>
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <a href="#" class="logo">Aim</a>
+      <!-- Nav -->
+      <nav>
+        <a href="#" id="about-button">About</a>
+        <a href="#" id="contact-button">Contact</a>
+        <a href="#" id="profile-button">Profile</a>
+      </nav>
+    </div>
+
+    <div class="codeandinfo">
+      <!-- Information section -->
+        <div class="info">
+            <p>
+                With CSS, you can center text in a div in multiple ways. The most common way is to use the text-align property to center text horizontally. 
+                Another way is to use the line-height and vertical-align properties. The final way exclusively applies to flex items and requires the justify-content 
+                and align-items properties
+            </p>
+            <p>Examples</p>
+
+        <!-- Examples -->
+        <div class="example">
+            <p>
+                Input: "ABCDE"<br>
+                Output: "EDCBA"
+            </p>
+        </div>
+        
+        <div class="example">
+            <p>Input: "ABSD"<br>Output:"DSBA"</p>
+        </div>
+        </div>
+
+        <!-- Programming box -->
+        <div class="programmingspace">
+            <textarea id="code"></textarea>
+            <button class="submit-button">Submit</button>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script>
+
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+          lineNumbers: true,
+          mode: "python",
+
+        });
+
+
+      const boxes = document.querySelectorAll(".box");
+      boxes.forEach(function(box) {
+          box.addEventListener("click", function () {
+              window.open("sheet.html", "_self");
+          });
+      });
+
+      const contactButton = document.getElementById("contact-button");
+      contactButton.addEventListener("click", function () {
+          window.open("contact.html", "_self");
+      });
+
+      const profileButton = document.getElementById("profile-button");
+      profileButton.addEventListener("click", function () {
+          window.open("profile.html", "_self");
+      });
+
+      const aboutButton = document.getElementById("about-button");
+      aboutButton.addEventListener("click", function () {
+          window.open("about.html", "_self");
+      });
+    </script>
+
+  </body>
+</html>
