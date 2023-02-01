@@ -74,19 +74,18 @@
         justify-content: center;
         margin: 0 20%;
         padding: 0 3%;
-        background: linear-gradient(180deg, rgba(10,1,180,1) 0%, rgba(16,16,199,1) 12%, rgba(0,212,255,1) 100%);
         
    }
 
    .info{
     padding-bottom: 10px;
     margin:0 auto;
-    background-color: rgb(67, 149, 169);
+    background-color: rgb(251, 251, 251);
     padding: 10px;
    }
    .CodeMirror {
     height: 700px;
-    background-color: rgb(195, 193, 193);
+    background-color: rgb(194, 189, 189);
     color: rgb(34, 33, 33);
     display: block;
   }
@@ -96,7 +95,7 @@
    .example{
     padding:5px;
     border-radius: 10px;
-    background-color: #43A994;
+    background-color: #d1d1d1;
     margin: 5px auto;
    }
 
@@ -109,18 +108,17 @@
         justify-content: center;
         margin: 0 0;
         padding: 0 0;
-        background: white;
    }
    .example{
     padding:5px;
     border-radius: 10px;
-    background: linear-gradient(#ff575a,#ff54a2);
+    background-color:#E9F1FA;
     margin: 5px auto;
    }
    .info{
     padding-bottom: 10px;
     margin:0 auto;
-    background: linear-gradient(#ff54a2,#ff575a);
+    background-color:#E9F1FA;
     padding: 10px;
    }
 
