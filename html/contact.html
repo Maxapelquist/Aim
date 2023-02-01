@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Contact Page</title>
+    <link rel="stylesheet" href="../css/contact.css">
+  </head>
+  <body>
+    <div class="toolbar">
+      <a href="#" class="logo">My Website</a>
+      <nav>
+        <a href="#" id="about-button">About</a>
+        <a href="#" id="profile-button">Profile</a>
+        <a href="#" id="back-button">Back</a>
+      </nav>
+    </div>
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <form class="contact-form">
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <script>
+      const backButton = document.getElementById("back-button");
+      backButton.addEventListener("click", function goBack() {
+          window.open("index.html", "_self");
+      });
+      const profileButton = document.getElementById("profile-button");
+      profileButton.addEventListener("click", function () {
+        window.open("profile.html", "_self");
+      });
+      const aboutButton = document.getElementById("about-button");
+      aboutButton.addEventListener("click", function () {
+        window.open("about.html", "_self");
+      });
+    </script>
+  </body>
+</html>
