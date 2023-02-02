@@ -3,6 +3,7 @@
   <head>
     <title>Aim Homepage</title>
     <link rel="stylesheet" href="../css/index.css">
+
   </head>
   <body>
     <!-- Toolbar -->
@@ -10,8 +11,8 @@
       <a href="#" class="logo">Aim</a>
       <!-- Nav -->
       <nav>
-        <a href="#" id="about-button">About</a>
         <a href="#" id="contact-button">Contact</a>
+        <a href="#" id="about-button">About</a>
         <a href="#" id="profile-button">Profile</a>
       </nav>
     </div>
@@ -34,30 +35,9 @@
       <p> Annons 4</p>
     </div>
 
-    <!-- Scripts -->
-    <script>
-      const boxes = document.querySelectorAll(".box");
-      boxes.forEach(function(box) {
-        box.addEventListener("click", function () {
-          window.open("sheet.html", "_self");
-        });
-      });
-
-      const contactButton = document.getElementById("contact-button");
-      contactButton.addEventListener("click", function () {
-        window.open("contact.html", "_self");
-      });
-
-      const profileButton = document.getElementById("profile-button");
-      profileButton.addEventListener("click", function () {
-        window.open("profile.html", "_self");
-      });
-
-      const aboutButton = document.getElementById("about-button");
-      aboutButton.addEventListener("click", function () {
-        window.open("about.html", "_self");
-      });
-    </script>
 
   </body>
+  <!-- Scripts -->
+  <script src="../JS/toolbar.js"></script>
+  <script src="../JS/cases.js"></script>
 </html>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Aim Homepage</title>
+    <title>Code Challenge</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.57.0/lib/codemirror.min.css">
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.57.0/lib/codemirror.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.57.0/mode/python/python.min.js"></script>
-    <script href="codetest.js"></script>
     <link rel="stylesheet" href="../css/codetest.css">
 
+    
   </head>
   <body>
     <!-- Toolbar -->
@@ -53,7 +53,7 @@
         <!-- Programming box -->
         <div class="programmingspace">
             <textarea id="code"></textarea>
-            <button class="submit-button">Submit</button>
+            <button class="submit-button" onClick="getCode()">Submit</button>
         </div>
     </div>
     
@@ -64,37 +64,11 @@
 
 
     <!-- Scripts -->
-    <script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="../JS/testcodetest.js"></script>
+    <script src="../JS/toolbar.js"></script>
 
-      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-          lineNumbers: true,
-          mode: "python",
-
-        });
-
-
-      const boxes = document.querySelectorAll(".box");
-      boxes.forEach(function(box) {
-          box.addEventListener("click", function () {
-              window.open("sheet.html", "_self");
-          });
-      });
-
-      const contactButton = document.getElementById("contact-button");
-      contactButton.addEventListener("click", function () {
-          window.open("contact.html", "_self");
-      });
-
-      const profileButton = document.getElementById("profile-button");
-      profileButton.addEventListener("click", function () {
-          window.open("profile.html", "_self");
-      });
-
-      const aboutButton = document.getElementById("about-button");
-      aboutButton.addEventListener("click", function () {
-          window.open("about.html", "_self");
-      });
-    </script>
 
   </body>
 </html>

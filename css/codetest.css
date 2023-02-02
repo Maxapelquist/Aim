@@ -74,13 +74,14 @@
         justify-content: center;
         margin: 0 20%;
         padding: 0 3%;
+        color: #FED48D;
         
    }
 
    .info{
     padding-bottom: 10px;
-    margin:0 auto;
-    background-color: rgb(251, 251, 251);
+    margin:0 0;
+    background-color: #005E5B;
     padding: 10px;
    }
    .CodeMirror {
@@ -89,13 +90,11 @@
     color: rgb(34, 33, 33);
     display: block;
   }
-    .programmingspace{
-
-   }
    .example{
     padding:5px;
     border-radius: 10px;
-    background-color: #d1d1d1;
+    background-color: #003A38;
+    color:#FED48D;
     margin: 5px auto;
    }
 
@@ -112,13 +111,11 @@
    .example{
     padding:5px;
     border-radius: 10px;
-    background-color:#E9F1FA;
     margin: 5px auto;
    }
    .info{
     padding-bottom: 10px;
     margin:0 auto;
-    background-color:#E9F1FA;
     padding: 10px;
    }
 

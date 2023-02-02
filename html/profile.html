@@ -8,9 +8,9 @@
     <div class="toolbar">
       <a href="#" class="logo">My Website</a>
       <nav>
-        <a href="#" id="about-button">About</a>
         <a href="#" id="contact-button">Contact</a>
-        <a href="#" id="back-button">Back</a>
+        <a href="#" id="about-button">About</a>
+        <a href="#" id="profile-button">Profile</a>
       </nav>
     </div>
     <div class="profile-container">
@@ -25,57 +25,8 @@
     </div>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
-<script>
-  // Firebase Configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDaCJ2QGm-epEiiCTps_B8rTGivCiywMdg",
-    authDomain: "aimdatabase-db87d.firebaseapp.com",
-    databaseURL: "https://aimdatabase-db87d-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "aimdatabase-db87d",
-    storageBucket: "aimdatabase-db87d.appspot.com",
-    messagingSenderId: "17048738724",
-    appId: "1:17048738724:web:a4c59a25d8cd2c99933f31",
-    measurementId: "G-5GXNWLNF5W"
-  };
-
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.database();
-
-  function createProfile() {
-    // Get user input
-    const userId = document.getElementById("userId").value;
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const imageUrl = document.getElementById("imageUrl").value;
-
-    // Write data to Firebase
-    db.ref('users/' + userId).set({
-      username: name,
-      email: email,
-      profile_picture: imageUrl
-    });
-
-    // Confirmation message
-    alert("Profile created successfully!");
-  }
-
-  const backButton = document.getElementById("back-button");
-  backButton.addEventListener("click", function goBack() {
-      window.open("index.html", "_self");
-  });
-
-  const contactButton = document.getElementById("contact-button");
-  contactButton.addEventListener("click", function () {
-    window.open("contact.html", "_self");
-  });
-
-  const aboutButton = document.getElementById("about-button");
-  aboutButton.addEventListener("click", function () {
-    window.open("about.html", "_self");
-      });
-
-</script>
+<script src="../JS/profile.js"></script>
+<script src="../JS/toolbar.js"></script>
 </body>
 </html>
 
