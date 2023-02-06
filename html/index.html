@@ -10,9 +10,9 @@
       <a href="#" class="logo">Aim</a>
       <!-- Nav -->
       <nav>
-        <a href="#" id="about-button">About</a>
         <a href="#" id="contact-button">Contact</a>
         <a href="#" id="profile-button">Profile</a>
+        <a href="#" id="back-button">Back</a>
       </nav>
     </div>
 
@@ -35,29 +35,9 @@
     </div>
 
     <!-- Scripts -->
-    <script>
-      const boxes = document.querySelectorAll(".box");
-      boxes.forEach(function(box) {
-        box.addEventListener("click", function () {
-          window.open("sheet.html", "_self");
-        });
-      });
 
-      const contactButton = document.getElementById("contact-button");
-      contactButton.addEventListener("click", function () {
-        window.open("contact.html", "_self");
-      });
-
-      const profileButton = document.getElementById("profile-button");
-      profileButton.addEventListener("click", function () {
-        window.open("profile.html", "_self");
-      });
-
-      const aboutButton = document.getElementById("about-button");
-      aboutButton.addEventListener("click", function () {
-        window.open("about.html", "_self");
-      });
-    </script>
+     <script src="../JS/cases.js"></script>
+     <script src="../JS/toolbar.js"></script>
 
   </body>
 </html>
