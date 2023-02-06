@@ -1,91 +1,18 @@
+ <!DOCTYPE html>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-database.js"></script>
+
 <html>
   <head>
+    <title>Sheet Challange</title>
+    <link rel="stylesheet" type="text/css" href="../css/sheet.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <style>
-
-      .toolbar {
-        background-color: #333;
-        color: #fff;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      }
-
-      .logo {
-        font-size: 20px;
-        font-weight: bold;
-        color: #fff;
-        text-decoration: none;
-      }
-      nav {
-        display: flex;
-        align-items: center;
-      }
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        padding: 0 20px;
-        font-size: 16px;
-        transition: all 0.2s ease-in-out;
-      }
-      nav a:hover {
-        color: #ccc;
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-
-      #spreadsheet-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: calc(100vh - 40px);
-      }
-
-      #spreadsheet {
-        border: 1px solid lightgray;
-        display: flex;
-        flex-direction: column;
-        background-color: #ffffff;
-      }
-
-      .row {
-        display: flex;
-      }
-
-      .cell {
-        border: 1px solid lightgray;
-        height: 40px;
-        text-align: center;
-        vertical-align: middle;
-        width: 40px;
-      }
-
-      .header-cell {
-        background-color: #dddddd;
-        border: 1px solid lightgray;
-        font-weight: bold;
-        height: 40px;
-        text-align: center;
-        vertical-align: middle;
-        width: 40px;
-      }
-
-      .menu-cell {
-        border: 1px solid lightgray;
-        height: 40px;
-        text-align: center;
-        vertical-align: middle;
-        width: 40px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div class="toolbar">
+      <a href="#" class="logo">Aim</a>
       <nav>
         <a href="#" id="back-button">Back</a>
       </nav>
@@ -93,6 +20,7 @@
     <div id="spreadsheet-container">
       <div id="spreadsheet"></div>
     </div>
+<<<<<<< Updated upstream
     <script>
       const spreadsheet = $("#spreadsheet");
 
@@ -136,4 +64,11 @@
     });
   </script>
 </body>
+=======
+    <script src="../JS/sheet.js"></script>
+    <script src="../JS/toolbar.js"></script>
+  </body>
+>>>>>>> Stashed changes
 </html>
+
+
