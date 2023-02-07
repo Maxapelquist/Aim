@@ -4,41 +4,6 @@ body {
   background: radial-gradient(circle, rgb(227 227 227), rgb(56 73 67));
   }
 
-  /* Toolbar styles */
-  .toolbar {
-    background-color: #333;
-    color: #fff;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  }
-  /* Logo styles */
-  .logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-  }
-  /* Nav styles */
-  nav {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-  }
-  /* Nav links */
-  nav a {
-    color: #fff;
-    font-size: 16px;
-    padding: 0 10px;
-    text-decoration: none;
-    transition: background-color 0.2s ease-out;
-  }
-  nav a:hover {
-    background-color: rgba(255,255,255,0.1);
-  }
   /* Image styles */
   .image {
     width: 100%;
