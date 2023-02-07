@@ -58,3 +58,8 @@ body {
    .box p {
      padding: 20px;
    }
+
+   .box:hover{
+    background-color: #bebdbd;
+    cursor: pointer;
+   }
