@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aim Homepage</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.57.0/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.57.0/lib/codemirror.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.57.0/mode/python/python.min.js"></script>
+    <script href="./js/codetest.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    
+
+
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <!-- Flexslider  -->
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="./css/codetest.css">
+
+  </head>
+  <body>
+    <div id="fh5co-started">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row animate-box">
+          <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+            <h2>Welcome to the coding test!</h2>
+            <p>This test aims to gauge your skill level for programming. Read carefully and make sure the program works as the examples show.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="explain">
+      <header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner">
+        <div class="overlay"></div>
+        <div class="container">
+          
+                <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+                  <h1>Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.</h1>
+                  <h2>The overall run time complexity should be O(log (m+n)). </h2>
+                  <h3><p><b>Input:</b> nums1 = [1,2], nums2 = [3,4]<br>
+                    <b>Output:</b> 2.50000<br>
+                    <b>Explanation:</b> merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
+                  </p></h3>
+                  <h3>
+                  <p><b>Input:</b> nums1 = [1,2], nums2 = [3,4]<br>
+                    <b>Output:</b> 2.50000<br>
+                    <b>Explanation:</b> merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
+                  </p>
+                  </div>
+        </div>
+  
+      </header>
+      </div>
+
+    <div class="codeandinfo">
+      <!-- Information section -->
+
+        <!-- Programming box -->
+        <div class="info" id="codesec">
+            <textarea id="code"></textarea>
+            <button class="submit-button">Submit</button>
+        </div>
+    </div>
+
+    
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script>
+
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+          lineNumbers: true,
+          mode: "python",
+        });
+
+    </script>
+
+  </body>
+</html>
