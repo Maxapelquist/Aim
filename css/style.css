@@ -618,6 +618,10 @@ h1, h2, h3, h4, h5, h6, figure {
   background: rgba(221, 53, 110, 0.03);
 }
 
+#fh5co-about{
+  background-color: rgb(254, 232, 87);
+}
+
 #fh5co-slider,
 #fh5co-about,
 #fh5co-wireframe,
